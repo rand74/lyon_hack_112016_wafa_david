@@ -1,0 +1,32 @@
+GameInLyonBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: GameInLyonBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        email:
+            type: string
+            length: '50'
+            unique: true
+        name:
+            type: string
+            length: '100'
+            unique: true
+        country:
+            type: string
+            length: '50'
+        city:
+            type: string
+            length: '50'
+        language:
+            type: string
+            length: '50'
+        password:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

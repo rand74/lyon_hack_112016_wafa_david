@@ -1,0 +1,4 @@
+services:
+#    game_in_lyon.example:
+#        class: GameInLyonBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

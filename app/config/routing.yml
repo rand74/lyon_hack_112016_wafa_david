@@ -1,3 +1,4 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+game_in_lyon:
+    resource: "@GameInLyonBundle/Resources/config/routing.yml"
+    prefix:   /
+
