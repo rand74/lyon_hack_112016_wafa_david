@@ -1,0 +1,57 @@
+GameInLyonBundle\Entity\Activities:
+    type: entity
+    table: null
+    repositoryClass: GameInLyonBundle\Repository\ActivitiesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        category:
+            type: string
+            length: 255
+        address:
+            type: string
+            length: 255
+        postcode:
+            type: integer
+        city:
+            type: string
+            length: 255
+        phone:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+            nullable: true
+        website:
+            type: string
+            length: 255
+            nullable: true
+        classement:
+            type: string
+            length: 255
+            nullable: true
+        ouverture:
+            type: string
+            length: 255
+            nullable: true
+        pricemin:
+            type: string
+            length: 255
+            nullable: true
+        pricemax:
+            type: string
+            length: 255
+            nullable: true
+        latitude:
+            type: text
+        longitude:
+            type: text
+    lifecycleCallbacks: {  }

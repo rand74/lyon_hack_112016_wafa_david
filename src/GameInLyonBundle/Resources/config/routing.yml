@@ -5,3 +5,4 @@ game_in_lyon_user:
 game_in_lyon_homepage:
     path:     /
     defaults: { _controller: GameInLyonBundle:Default:index }
+

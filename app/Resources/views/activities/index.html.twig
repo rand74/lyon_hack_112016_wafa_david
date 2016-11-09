@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Activities list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Postcode</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Classement</th>
+                <th>Ouverture</th>
+                <th>Pricemin</th>
+                <th>Pricemax</th>
+                <th>Coordinates</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for activity in activities %}
+            <tr>
+                <td><a href="{{ path('activities_show', { 'id': activity.id }) }}">{{ activity.id }}</a></td>
+                <td>{{ activity.name }}</td>
+                <td>{{ activity.address }}</td>
+                <td>{{ activity.postcode }}</td>
+                <td>{{ activity.city }}</td>
+                <td>{{ activity.phone }}</td>
+                <td>{{ activity.email }}</td>
+                <td>{{ activity.website }}</td>
+                <td>{{ activity.classement }}</td>
+                <td>{{ activity.ouverture }}</td>
+                <td>{{ activity.pricemin }}</td>
+                <td>{{ activity.pricemax }}</td>
+                <td>{{ activity.coordinates }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('activities_show', { 'id': activity.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('activities_edit', { 'id': activity.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('activities_new') }}">Create a new activity</a>
+        </li>
+    </ul>
+{% endblock %}
