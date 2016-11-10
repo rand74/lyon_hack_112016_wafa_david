@@ -2,3 +2,5 @@ game_in_lyon:
     resource: "@GameInLyonBundle/Resources/config/routing.yml"
     prefix:   /
 
+
+

@@ -4,6 +4,7 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+     gameinlyon.form.registration:
+         class: GameInLyonBundle\Form\RegistrationType
+         tags:
+            - { name: form.type, alias: gameinlyon_user_registration }

@@ -22,7 +22,7 @@ class ActivitiesController extends Controller
 
         $activities = $em->getRepository('GameInLyonBundle:Activities')->findAll();
 
-        return $this->render('activities/index.html.twig', array(
+        return $this->render('activities/connexion.html.twig', array(
             'activities' => $activities,
         ));
     }

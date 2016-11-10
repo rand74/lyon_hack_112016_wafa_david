@@ -1,22 +1,12 @@
 GameInLyonBundle\Entity\User:
     type: entity
-    table: null
-    repositoryClass: GameInLyonBundle\Repository\UserRepository
-    id:
+    table: tourist_user
+    fields:
         id:
             type: integer
             id: true
             generator:
                 strategy: AUTO
-    fields:
-        email:
-            type: string
-            length: '50'
-            unique: true
-        name:
-            type: string
-            length: '100'
-            unique: true
         country:
             type: string
             length: '50'
@@ -26,7 +16,4 @@ GameInLyonBundle\Entity\User:
         language:
             type: string
             length: '50'
-        password:
-            type: string
-            length: 255
-    lifecycleCallbacks: {  }
+

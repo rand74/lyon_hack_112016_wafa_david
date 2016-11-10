@@ -1,8 +1,9 @@
-game_in_lyon_user:
-    resource: "@GameInLyonBundle/Resources/config/routing/user.yml"
-    prefix:   /user
-
 game_in_lyon_homepage:
     path:     /
     defaults: { _controller: GameInLyonBundle:Default:index }
+
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
 

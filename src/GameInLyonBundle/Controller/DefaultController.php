@@ -36,6 +36,6 @@ class DefaultController extends Controller
             $em->persist($activitiesEntity);
         }
         $em->flush();
-        return $this->render('GameInLyonBundle:user:index.html.twig');
+        return $this->render('GameInLyonBundle:user:connexion.html.twig');
     }*/
 }
