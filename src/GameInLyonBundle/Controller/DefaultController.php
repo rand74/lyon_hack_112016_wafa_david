@@ -11,6 +11,4 @@ class DefaultController extends Controller
         return $this->render('front\parcours.html.twig');
     }
 
-
-
 }
