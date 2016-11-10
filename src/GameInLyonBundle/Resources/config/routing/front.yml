@@ -1,0 +1,24 @@
+game_in_lyon_parcours:
+    path:   /parcours
+    defaults:  {_controller: "GameInLyonBundle:Default:index"}
+
+game_in_lyon_parcours_religieux:
+    path:   /parcours-religieux
+    defaults:  {_controller: "GameInLyonBundle:Activities:religious"}
+
+game_in_lyon_parcours_gourmet:
+    path:   /parcours-gourmet
+    defaults:  {_controller: "GameInLyonBundle:Activities:gourmet"}
+
+game_in_lyon_parcours_culturel:
+    path:   /parcours-culturel
+    defaults:  {_controller: "GameInLyonBundle:Activities:culturel"}
+
+game_in_lyon_parcours_balade:
+    path:   /parcours-balade
+    defaults:  {_controller: "GameInLyonBundle:Activities:balade"}
+
+game_in_lyon_parcours_aleatoire:
+    path:   /parcours-aleatoire
+    defaults:  {_controller: "GameInLyonBundle:Activities:aleatoire"}
+

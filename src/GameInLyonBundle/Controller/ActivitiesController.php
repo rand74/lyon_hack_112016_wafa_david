@@ -16,16 +16,61 @@ class ActivitiesController extends Controller
      * Lists all activity entities.
      *
      */
-    public function indexAction()
+
+    public function religiousAction()
     {
-        $em = $this->getDoctrine()->getManager();
+        $repository = $this->getDoctrine()->getRepository('GameInLyonBundle:Activities');
+        $activities = $repository->getReligious();
 
-        $activities = $em->getRepository('GameInLyonBundle:Activities')->findAll();
+        return $this->render('front/parcours-religieux.html.twig', array(
+            'activities' => $activities
 
-        return $this->render('activities/connexion.html.twig', array(
-            'activities' => $activities,
         ));
     }
+    public function gourmetAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('GameInLyonBundle:Activities');
+        $activities = $repository->getGourmet();
+
+        return $this->render('front/parcours-gourmet.html.twig', array(
+            'activities' => $activities
+
+        ));
+    }
+    public function culturelAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('GameInLyonBundle:Activities');
+        $activities = $repository->getCulturel();
+
+        return $this->render('front/parcours-culturel.html.twig', array(
+            'activities' => $activities
+
+        ));
+    }
+    public function baladeAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('GameInLyonBundle:Activities');
+        $activities = $repository->getBalade();
+
+        return $this->render('front/parcours-balade.html.twig', array(
+            'activities' => $activities
+
+        ));
+    }
+
+
+    public function aleatoireAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('GameInLyonBundle:Activities');
+        $activities = $repository->getRandom();
+
+        return $this->render('front/parcours-aleatoire.html.twig', array(
+            'activities' => $activities
+
+        ));
+    }
+
+
 
     /**
      * Creates a new activity entity.

@@ -1,9 +1,6 @@
 game_in_lyon_homepage:
-    path:     /
-    defaults: { _controller: GameInLyonBundle:Default:index }
+    resource: "@GameInLyonBundle/Resources/config/routing/front.yml"
+    prefix:   /
 
-# app/config/routing.yml
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 

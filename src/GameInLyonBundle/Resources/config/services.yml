@@ -1,4 +1,1 @@
-services:
-    game.activities_generator:
-        class:        GameInLyonBundle\Services\ActivitiesGenerator
-        arguments: [@service_container, 5000]
+
