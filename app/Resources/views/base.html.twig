@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
 
-        {% block stylesheets %}{% endblock %}
         <title>{% block title %}GameInLyon: le jeu touristique à Lyon{% endblock %}</title>
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -16,17 +15,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset ('css/style.css')}}">
+            <link rel="stylesheet" type="text/css" href="{{ asset ('css/header.css')}}">
         {% endblock %}
     </head>
     <body>
-        <header>
+
+        <header class="col-xs-12">
             <div class="navbar">
                 <div class="container-fluid">
                     <div class="col-xs-12">
                         <div class="row">
-                            <div class="col-xs-4">
-                                <img src="{{ asset ('') }}">
+                            <div class="col-xs-6">
+                                <div class="home-button" id="register">
+                                    <a href="{{ path ('fos_user_registration_register') }}">Inscription</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="home-button" id="connection">
+                                    <a href="{{ path ('fos_user_security_login') }}">Connexion</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -34,18 +41,18 @@
             </div>
         </header>
         {% block body %}
-            <footer>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xs-6">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
 
-                        </div>
-                        <div class="col-xs-6 social-bar">
+                    </div>
+                    <div class="col-xs-6 social-bar">
 
-                        </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
         {% endblock %}
 
         {% block javascripts %}

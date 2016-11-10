@@ -10,4 +10,9 @@ class DefaultController extends Controller
     {
         return $this->render('front\parcours.html.twig');
     }
+
+    public function homeAction()
+    {
+        return $this->render('front/home.html.twig');
+    }
 }

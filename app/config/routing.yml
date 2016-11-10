@@ -6,4 +6,3 @@ game_in_lyon:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-

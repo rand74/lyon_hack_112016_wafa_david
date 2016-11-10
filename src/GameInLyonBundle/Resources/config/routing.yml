@@ -2,6 +2,6 @@ game_in_lyon_homepage:
     resource: "@GameInLyonBundle/Resources/config/routing/front.yml"
     prefix:   /
 
-game_in_lyon_profile:
+
 
 

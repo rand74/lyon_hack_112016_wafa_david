@@ -1,3 +1,7 @@
+game_in_lyon_homepage:
+    path:   /
+    defaults:  {_controller: "GameInLyonBundle:Default:home"}
+
 game_in_lyon_parcours:
     path:   /parcours
     defaults:  {_controller: "GameInLyonBundle:Default:index"}
