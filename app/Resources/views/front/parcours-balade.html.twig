@@ -1,11 +1,17 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Parcours Balade{% endblock %}
 {% block body %}
-    <ul>
-        {% for activity in activities %}
-            <li>
-                {{ activity.name }}<br>{{ activity.address }}<br>{{ activity.postcode }}<br>{{ activity.city }}<br>{{ activity.phone }}<br>{{ activity.ouverture }}<br>
-            </li>
-        {% endfor %}
-    </ul>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="col-xs-offset-1 col-xs-10">
+                <ul>
+                    {% for activity in activities %}
+                        <li>
+                            {{ activity.name }}<br>{{ activity.address }}<br>{{ activity.postcode }}<br>{{ activity.city }}<br>{{ activity.phone }}<br>{{ activity.ouverture }}<br>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
 {% endblock %}
