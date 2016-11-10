@@ -3,7 +3,7 @@
 {% block body %}
     <section class="container-fluid">
         <div class="container">
-            <div class="col-xs-offset-1 col-xs-10">
+            <div class="col-xs-6">
                 <ul>
                     {% for activity in activities %}
                         <li>
@@ -11,6 +11,9 @@
                         </li>
                     {% endfor %}
                 </ul>
+            </div>
+            <div class="col-xs-6" id="img">
+                <img src="{{ asset('images/parc.jpg') }}">
             </div>
         </div>
     </section>

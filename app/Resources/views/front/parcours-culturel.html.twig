@@ -1,11 +1,20 @@
 {% extends 'layout.html.twig' %}
 {% block title %}Parcours Culturel{% endblock %}
 {% block body %}
-    <ul>
-        {% for activity in activities %}
-            <li>
-                {{ activity.name }}<br>{{ activity.address }}<br>{{ activity.postcode }}<br>{{ activity.city }}<br>{{ activity.phone }}<br>{{ activity.email }}<br>{{ activity.ouverture }}<br>
-            </li>
-        {% endfor %}
-    </ul>
+    <section class="container-fluid">
+        <div class="container">
+            <div class="col-xs-6">
+                <ul>
+                    {% for activity in activities %}
+                        <li>
+                            {{ activity.name }}<br>{{ activity.address }}<br>{{ activity.postcode }}<br>{{ activity.city }}<br>{{ activity.phone }}<br>{{ activity.email }}<br>{{ activity.ouverture }}<br>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-xs-6" id="img">
+                <img src="{{ asset('images/musee.jpg') }}">
+            </div>
+        </div>
+    </section>
 {% endblock %}
