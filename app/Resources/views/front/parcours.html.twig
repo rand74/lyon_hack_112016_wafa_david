@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %}Parcours Thématiques{% endblock %}
+{% block body %}
+    <section class="container-fluid">
+        <div class="container">
+            <div class="">
+                <h1>Parcours Thématiques</h1>
+                    <h3><a href="{{ path('game_in_lyon_parcours_religieux') }}">Parcours Religieux</a></h3>
+                    <h3><a href="{{ path('game_in_lyon_parcours_gourmet') }}" >Parcours Gourmet</a></h3>
+                    <h3><a href="{{ path('game_in_lyon_parcours_culturel') }}">Parcours Culturel</a></h3>
+                    <h3><a href="{{ path('game_in_lyon_parcours_balade') }}" >Parcours Balade</a></h3>
+                    <h3><a href="{{ path('game_in_lyon_parcours_aleatoire') }}" >Parcours Aléatoire</a></h3>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

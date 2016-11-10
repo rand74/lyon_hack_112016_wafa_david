@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title %}Parcours Aléatoire{% endblock %}
+{% block body %}
+    <ul>
+        {% for activity in activities %}
+            <li>
+                {{ activity.name }}<br>{{ activity.address }}<br>{{ activity.postcode }}<br>{{ activity.city }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
