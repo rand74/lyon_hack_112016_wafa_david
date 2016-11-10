@@ -10,6 +10,26 @@
                             {{ activity.name }}<br>{{ activity.address }}<br>{{ activity.postcode }}<br>{{ activity.city }}<br>{{ activity.phone }}<br>{{ activity.email }}<br>{{ activity.ouverture }}<br>
                         </li>
                     {% endfor %}
+                    {% for activity in activities %}
+                        <div id="map">
+                            <script>
+                                function initMap() {
+                                    var uluru = {lat: {{ activity.latitude }}, lng: {{ activity.longitude}}};
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 14,
+                                        center: uluru
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                }
+                            </script>
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT1ybqTsqE0Nzit6xL7PfZWcgnLmThfXc&callback=initMap">
+                            </script>
+                        </div>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="col-xs-6" id="img">
