@@ -27,12 +27,12 @@
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="home-button" id="register">
-                                    <a href="{{ path ('fos_user_registration_register') }}">Inscription</a>
+                                    <a href="{{ path ('fos_user_registration_register') }}">INSCRIPTION</a>
                                 </div>
                             </div>
                             <div class="col-xs-6">
                                 <div class="home-button" id="connection">
-                                    <a href="{{ path ('fos_user_security_login') }}">Connexion</a>
+                                    <a href="{{ path ('fos_user_security_login') }}">CONNEXION</a>
                                 </div>
                             </div>
                         </div>
@@ -41,19 +41,16 @@
             </div>
         </header>
         {% block body %}
+        {% endblock %}
         <footer>
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-6">
-
-                    </div>
-                    <div class="col-xs-6 social-bar">
-
-                    </div>
+                <div class="col-xs-12 footer">
+                    <h2>SUIVEZ NOUS SUR LES RÉSEAUX SOCIAUX</h2>
+                    <img src="{{ asset ('images/social-bar.png') }}" id="social-bar"/>
                 </div>
             </div>
         </footer>
-        {% endblock %}
+
 
         {% block javascripts %}
             <script type="text/javascript" src="{{ asset ('js/main.js')}}"></script>
